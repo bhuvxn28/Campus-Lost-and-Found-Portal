@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Lost Item | Campus Lost & Found Portal</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Campus Lost & Found</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="browse.html">Browse</a></li>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="search">
+                <input type="text" placeholder="Search items">
+                <button>&#128269;</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="form-section">
+        <h1>Report a Lost Item</h1>
+        <p>Tell us what you lost and where. Someone may have found it.</p>
+        <p class="note">Fields marked * are required.</p>
+
+        <form id="lost-form" class="report-form">
+            <div>
+                <label for="itemName">Item Name *</label>
+                <input type="text" id="itemName" placeholder="e.g. Black backpack" required>
+            </div>
+            <div>
+                <label for="category">Category</label>
+                <select id="category">
+                <option value="">Select a category</option>
+                <option>Bags</option>
+                <option>Electronics</option>
+                <option>ID Cards</option>
+                <option>Books</option>
+                <option>Keys</option>
+                <option>Wallets</option>
+                <option>Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="location">Where did you lose it *</label>
+                <input type="text" id="location" placeholder="e.g. Library, 2nd floor" required>
+            </div>
+            <div>
+                <label for="dateLost">Date Lost *</label>
+                <input type="date" id="dateLost" required>
+            </div>
+            <div>
+                <label for="contact">Contact (phone or email) *</label>
+                <input type="text" id="contact" placeholder="How can people reach you?" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Colour, brand, marks, anything that helps identify it"></textarea>
+            </div>
+
+            <div id="form-status" style="display:none;padding:12px;border-radius:8px;"></div>
+
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='browse.html'">View Items</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <h2>Campus Lost & Found</h2>
+        <p>Helping students reconnect with their belongings.</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="report-lost.html">Report Lost</a>
+            <a href="report-found.html">Report Found</a>
+        </div>
+        <p class="copyright">&copy; 2026 Campus Lost & Found Portal</p>
+    </footer>
+
+    <script type="module" src="../script.js"></script>
+
+</body>
+
+</html>
