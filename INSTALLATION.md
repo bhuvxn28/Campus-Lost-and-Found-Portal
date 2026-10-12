@@ -8,8 +8,8 @@ Follow these quick steps to get the Campus Lost & Found Portal running on your l
 
 Open your terminal and clone the repository:
 ```bash
-git clone https://github.com/Anshratta/LOSTandFoundportal.git
-cd LOSTandFoundportal
+git clone https://github.com/bhuvxn28/Campus-Lost-and-Found-Portal.git
+cd Campus-Lost-and-Found-Portal
 ```
 
 ---

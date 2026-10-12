@@ -76,7 +76,7 @@ Every submission gets pushed straight to Firebase Firestore, and the home/browse
 ## Project Structure
 
 ```
-LOSTandFoundportal/
+Campus-Lost-and-Found-Portal/
 ├── index.html              # Home page — stats, categories, latest items
 ├── style.css                # All styling for the site
 ├── script.js                 # Handles home page + browse page logic
@@ -102,8 +102,8 @@ Want to run this on your own machine? Here's how:
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/Anshratta/LOSTandFoundportal.git
-   cd LOSTandFoundportal
+   git clone https://github.com/bhuvxn28/Campus-Lost-and-Found-Portal.git
+   cd Campus-Lost-and-Found-Portal
    ```
 
 2. Set up your own Firebase project

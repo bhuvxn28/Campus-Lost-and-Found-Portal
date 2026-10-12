@@ -715,3 +715,23 @@ label{
     font-size:18px;
 }
 
+
+/* ---- additions: select dropdown + active filter button ---- */
+.report-form select {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 16px;
+}
+
+.report-form select:focus {
+    outline: none;
+    border: 2px solid #B86AD9;
+}
+
+.filters button.active {
+    background: #D946EF;
+    box-shadow: 0 0 10px rgba(217, 70, 239, .6);
+}

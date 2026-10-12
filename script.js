@@ -25,13 +25,16 @@ const timeAgo = (ts) => {
     return days === 0 ? "Today" : days === 1 ? "Yesterday" : `${days} Days Ago`;
 };
 
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
 const showDetails = (item) =>
     alert(`Item: ${item.itemName || ""}\nContact: ${item.contact || "N/A"}\n\n${item.description || ""}`);
 
 // ================================================================
 // HOME PAGE — live stats + latest lost items
 // ================================================================
-if (path.endsWith("index.html") || path === "/" || path.endsWith("/LOSTandFoundportal/")) {
+if (!path.includes("/pages/") && (path.endsWith("index.html") || path.endsWith("/"))) {
 
     const statCards = document.querySelectorAll(".stats .card h2");
     const itemsContainer = document.querySelector(".items-container");
@@ -59,8 +62,8 @@ if (path.endsWith("index.html") || path === "/" || path.endsWith("/LOSTandFoundp
             card.className = "item-card";
             card.innerHTML = `
                 <div class="item-image">${icons[item.category?.toLowerCase()] || "📦"}</div>
-                <h3>${item.itemName || "Unknown Item"}</h3>
-                <p>${item.location || "Unknown Location"}</p>
+                <h3>${esc(item.itemName) || "Unknown Item"}</h3>
+                <p>${esc(item.location) || "Unknown Location"}</p>
                 <span>${timeAgo(item.timestamp)}</span>`;
             const btn = document.createElement("button");
             btn.className = "view-btn";
@@ -109,10 +112,10 @@ if (path.endsWith("browse.html")) {
             const div = document.createElement("div");
             div.className = `item ${item.type}`;
             div.innerHTML = `
-                <h3>${item.itemName || "Unknown"}</h3>
-                <p>${item.location || "Unknown location"}</p>
+                <h3>${esc(item.itemName) || "Unknown"}</h3>
+                <p>${esc(item.location) || "Unknown location"}</p>
                 <span>${item.type === "lost" ? "Lost" : "Found"}</span>
-                <small style="display:block;margin-top:4px;opacity:.6;">${item.category || ""}</small>`;
+                <small style="display:block;margin-top:4px;opacity:.6;">${esc(item.category)}</small>`;
             const btn = document.createElement("button");
             btn.className = "view-btn";
             btn.style.marginTop = "8px";
