@@ -1,4 +1,10 @@
-#  Campus Lost & Found Portal
+# Campus Lost & Found Portal
+
+**Presented by: Bhuvan**
+
+**Subject: Web Programming**
+
+A web application that helps college students report lost items and find their owners.
 
 A responsive web application that helps students report, browse, search, and recover lost and found items within a university campus.
 
