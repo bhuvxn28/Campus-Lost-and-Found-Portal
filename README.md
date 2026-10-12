@@ -44,7 +44,6 @@ The Campus Lost & Found Portal provides a centralized platform where students ca
 
 - Frontend: HTML5, CSS3, JavaScript
 - Database: Firebase Firestore 
-- Hosting: Vercel
 - Version Control: Git & GitHub
 
 No frameworks, no build tools — plain HTML/CSS/JS talking directly to Firebase, kept simple so the whole team could contribute easily.
